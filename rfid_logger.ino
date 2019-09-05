@@ -327,17 +327,17 @@ void checkAuth(uint32_t cardID) {
   ultoa(cardID, s_uid, 10);
   bool ff = 0; // fast-forward
 
-  File cfile = SD.open(acl_file); // temp hardcoded filename for testing
+  File cfile = SD.open(acl_file);
   if (cfile) {
     while (cfile.available()) {
       buf = cfile.read();
 
-      // if \r then expect and \n
+      // if \r then expect an \n
       if (buf == '\r') {
         continue;
       }
       
-      // we've reached the end end
+      // we've reached the end of the line
       if (buf == '\n') {
         // if fast-foward was set then there is no match, reset and continue
         if (ff) {
