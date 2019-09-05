@@ -1,0 +1,16 @@
+## Name of the file data will be logged to (limit to 8.3 filname - 8 char + 3 ext)
+output_file = out.txt
+
+## Activate ACL mode
+acl_mode = true
+
+## File which contains UIDs to check against (limit to 8.3 filname - 8 char + 3 ext)
+acl = acl.txt
+
+## Optional access_level (0-9) for variable ACL, by default
+## access is granted if a UID is found in the list
+#required_access_level = 3
+
+## Volume 1 - 10 (10 is loudest)
+volume = 10
+
